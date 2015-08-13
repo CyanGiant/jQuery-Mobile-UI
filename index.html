@@ -12,12 +12,29 @@
     <script src="js/script.js"></script>
 
   </head>
-    <div data-role="page" id="home">
+    <div data-role="page" id="home" data-theme="b">
       <div data-role="header">
         <h1>MileTracker</h1>
 
       </div>
-      
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+          <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
+        </ul>
+
+      </div>
+
+      <div data-role="content">
+        <h3>Welcome to the MileTracker Run App!</h3>
+        <p>With this app you can track your miles from running, jogging, walking, even skipping.</p>
+
+        <h3>Your Latest Trip</h3>
+        <ul id="stats" data-role='listview' data-filter="true" data-filter-placeholder='Filter trips by date or distance' data-inset="true"></ul>
+        <br>
+        <button id="clearRuns" onclick="return confirm('Are You Sure?')" data-theme="b">Clear Total Mileage</button>
+
+      </div>
     </div>
   <body>
   </body>
