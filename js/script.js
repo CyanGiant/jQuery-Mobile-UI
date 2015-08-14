@@ -1,6 +1,29 @@
 $(document).one('pageinit', function(){
+  //Display Runs
+  showRuns();
+
   // Add Handler
   $('#submitAdd').on('tap', addRun);
+
+  /*
+   * Show All Runs on homepage
+   */
+   function showRuns(){
+     //Get runs object
+     var runs = getRunsObject ();
+
+     //Check if empty
+     if(runs !== '' && runs !== null){
+       for(var i = 0;i < runs.length;i++){
+         $('#stats').append('<li class="ui-body-inherit ui-li-static"><strong>Date:</strong>'+runs[i]["date"]+
+         '<br><strong>Distance: </strong>'+runs[i]["miles"]+' Miles<div class="controls">' +
+         '<a href="#edit">Edit</a> | <a href="#">Delete</a></li>');
+       }
+       $('#home').bind('pageinint', function(){
+         $('#stats').listview('refresh');
+       });
+     }
+   }
 
   /*
    *Add A run
