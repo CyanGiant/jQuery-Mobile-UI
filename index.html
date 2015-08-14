@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-    <script src="js/jquery.mobile.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+    <!-- <script src="js/jquery.mobile.min.js"></script> -->
     <script src="js/script.js"></script>
     <script>
       $(function(){
@@ -22,17 +23,16 @@
   <body>
 <!-- HOME PAGE -->
     <div data-role="page" id="home" data-theme="b">
-      <div data-role="header">
+      <header data-role="header" data-theme="c">
         <h1>MileTracker</h1>
-
-      </div>
-      <header data-role="navbar">
+      </header>
+      <div data-role="navbar">
         <ul>
           <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
           <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
         </ul>
 
-      </header>
+      </div>
 
       <div data-role="content">
         <h3>Welcome to MileTracker!</h3>
@@ -68,7 +68,7 @@
       <div data-role="content">
         <h3>Add Trip</h3>
         <form id="addForm">
-          <label for="addMiles">Enter Miles:</label>
+          <label for="addMiles">Enter Miles: </label>
           <input type="text" id="addMiles">
           <label for="addDate">Enter Date:</label>
           <input type="text" data-role="date" class="date" id="addDate" data-inline="true">
