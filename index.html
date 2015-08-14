@@ -80,6 +80,36 @@
         <h4>MileTracker &copy; 2015</h4>
       </footer>
     </div>
+    <!-- Edit Page -->
+
+    <div data-role="page" id="edit" data-theme="b">
+      <div data-role="header">
+        <h1>MileTracker</h1>
+
+      </div>
+      <header data-role="navbar">
+        <ul>
+          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+          <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
+        </ul>
+
+      </header>
+
+      <div data-role="content">
+        <h3>Edit Trip</h3>
+        <form id="addForm">
+          <label for="addMiles">Enter Miles: </label>
+          <input type="text" id="editMiles">
+          <label for="addDate">Enter Date:</label>
+          <input type="text" data-role="date" class="date" id="editDate" data-inline="true">
+          <button id="submitEdit" class="ui-btn uibtn-b ui-corner-all">Update</button>
+        </form>
+
+      </div>
+      <footer data-role="footer" data-theme="b">
+        <h4>MileTracker &copy; 2015</h4>
+      </footer>
+    </div>
   </body>
 
 
