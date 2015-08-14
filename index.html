@@ -1,117 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Jquery Mobile UI</title>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
-    <!-- <script src="js/jquery.mobile.min.js"></script> -->
-    <script src="js/script.js"></script>
-    <script>
-      $(function(){
-        $('.date').each(function(){
-            $(this).datepicker();
-        });
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jquery Mobile UI</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    $(function() {
+      $('.date').each(function() {
+        $(this).datepicker();
       });
+    });
+  </script>
 
-    </script>
+</head>
 
-  </head>
-  <body>
-<!-- HOME PAGE -->
-    <div data-role="page" id="home" data-theme="b">
-      <header data-role="header" data-theme="c">
-        <h1>MileTracker</h1>
-      </header>
-      <div data-role="navbar">
-        <ul>
-          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
-          <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
-        </ul>
+<body>
+  <!-- HOME PAGE -->
+  <div data-role="page" id="home" data-theme="b">
+    <header data-role="header" data-theme="c">
+      <h1>MileTracker</h1>
+    </header>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+        <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
+      </ul>
 
-      </div>
-
-      <div data-role="content">
-        <h3>Welcome to MileTracker!</h3>
-        <br>
-        <p>You can track your miles from running, jogging, walking, even skipping.</p>
-        <br>
-        <h3>Your Latest Trip</h3>
-        <ul id="stats" data-role='listview' data-filter="true" data-filter-placeholder='Filter trips by date or distance' data-inset="true"></ul>
-        <br>
-        <button id="clearRuns" onclick="return confirm('Are You Sure?')" data-theme="b">Clear Total Mileage</button>
-
-        </div>
-        <footer data-role="footer" data-theme="b">
-          <h4>MileTracker &copy; 2015</h4>
-        </footer>
     </div>
 
-    <!-- ADD PAGE -->
+    <div data-role="content">
+      <h3>Welcome to MileTracker!</h3>
+      <br>
+      <p>You can track your miles from running, jogging, walking, even skipping.</p>
+      <br>
+      <h3>Your Latest Trip</h3>
+      <ul id="stats" data-role='listview' data-filter="true" data-filter-placeholder='Filter trips by date or distance' data-inset="true"></ul>
+      <br>
+      <button id="clearRuns" onclick="return confirm('Are You Sure?')" data-theme="b">Clear Total Mileage</button>
 
-    <div data-role="page" id="add" data-theme="b">
-      <div data-role="header">
-        <h1>MileTracker</h1>
-
-      </div>
-      <header data-role="navbar">
-        <ul>
-          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
-          <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
-        </ul>
-
-      </header>
-
-      <div data-role="content">
-        <h3>Add Trip</h3>
-        <form id="addForm">
-          <label for="addMiles">Enter Miles: </label>
-          <input type="text" id="addMiles">
-          <label for="addDate">Enter Date:</label>
-          <input type="text" data-role="date" class="date" id="addDate" data-inline="true">
-          <button id="submitAdd" class="ui-btn uibtn-b ui-corner-all">Submit</button>
-        </form>
-
-      </div>
-      <footer data-role="footer" data-theme="b">
-        <h4>MileTracker &copy; 2015</h4>
-      </footer>
     </div>
-    <!-- Edit Page -->
+    <footer data-role="footer" data-theme="b">
+      <h4>MileTracker &copy; 2015</h4>
+    </footer>
+  </div>
 
-    <div data-role="page" id="edit" data-theme="b">
-      <div data-role="header">
-        <h1>MileTracker</h1>
+  <!-- ADD PAGE -->
 
-      </div>
-      <header data-role="navbar">
-        <ul>
-          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
-          <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
-        </ul>
+  <div data-role="page" id="add" data-theme="b">
+    <div data-role="header">
+      <h1>MileTracker</h1>
 
-      </header>
-
-      <div data-role="content">
-        <h3>Edit Trip</h3>
-        <form id="addForm">
-          <label for="addMiles">Enter Miles: </label>
-          <input type="text" id="editMiles">
-          <label for="addDate">Enter Date:</label>
-          <input type="text" data-role="date" class="date" id="editDate" data-inline="true">
-          <button id="submitEdit" class="ui-btn uibtn-b ui-corner-all">Update</button>
-        </form>
-
-      </div>
-      <footer data-role="footer" data-theme="b">
-        <h4>MileTracker &copy; 2015</h4>
-      </footer>
     </div>
-  </body>
+    <header data-role="navbar">
+      <ul>
+        <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+        <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
+      </ul>
+
+    </header>
+
+    <div data-role="content">
+      <h3>Add Trip</h3>
+      <form id="addForm">
+        <label for="addMiles">Enter Miles: </label>
+        <input type="text" id="addMiles">
+        <label for="addDate">Enter Date:</label>
+        <input type="text" data-role="date" class="date" id="addDate" data-inline="true">
+        <button id="submitAdd" class="ui-btn uibtn-b ui-corner-all">Submit</button>
+      </form>
+
+    </div>
+    <footer data-role="footer" data-theme="b">
+      <h4>MileTracker &copy; 2015</h4>
+    </footer>
+  </div>
+  <!-- Edit Page -->
+
+  <div data-role="page" id="edit" data-theme="b">
+    <div data-role="header">
+      <h1>MileTracker</h1>
+
+    </div>
+    <header data-role="navbar">
+      <ul>
+        <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+        <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
+      </ul>
+
+    </header>
+
+    <div data-role="content">
+      <h3>Edit Trip</h3>
+      <form id="addForm">
+        <label for="addMiles">Enter Miles: </label>
+        <input type="text" id="editMiles">
+        <label for="addDate">Enter Date:</label>
+        <input type="text" data-role="date" class="date" id="editDate" data-inline="true">
+        <button id="submitEdit" class="ui-btn uibtn-b ui-corner-all">Update</button>
+      </form>
+
+    </div>
+    <footer data-role="footer" data-theme="b">
+      <h4>MileTracker &copy; 2015</h4>
+    </footer>
+  </div>
+</body>
 
 
 </html>
